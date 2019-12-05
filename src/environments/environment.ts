@@ -3,7 +3,17 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: "AIzaSyAqG9WoZScIfkXMRKN5UZmxIdeaGVp4j9M",
+    authDomain: "lm-smart-parking.firebaseapp.com",
+    databaseURL: "https://lm-smart-parking.firebaseio.com",
+    projectId: "lm-smart-parking",
+    storageBucket: "lm-smart-parking.appspot.com",
+    messagingSenderId: "31007894106",
+    appId: "1:31007894106:web:a25d9e75214ebd0ca6c663",
+    measurementId: "G-LGN9VF6323"
+  }
 };
 
 /*

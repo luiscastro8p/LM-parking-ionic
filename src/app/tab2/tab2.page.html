@@ -1,9 +1,37 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab Two
+     Estacionamientos
     </ion-title>
   </ion-toolbar>
 </ion-header>
+<ion-content>
+<ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+<ion-content>
+    <ion-content>
+        <ion-list>
+          <ion-item *ngFor="let esta of estacionamiento" class="animated fadeIn fast">
+              <ion-label>
+                  <h3>{{ esta.nombre }} <small>{{ esta.tipo }} </small></h3>
+                  <p>
+                    {{ esta.direccion }}
+                  </p>
+                </ion-label>
+                <ion-label slot="end" text-right>
+                  {{esta.disponibles}} / {{ esta.espacios }}
+                </ion-label>
+              </ion-item>
+            </ion-list>
+      </ion-content>
+</ion-content>
 
-<ion-content></ion-content>
+</ion-content>
+  <ion-content>
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed" (click)="abrirModal()">
+      <ion-fab-button>
+        <ion-icon name="add"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  </ion-content>
